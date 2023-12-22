@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  background: #1c1c1c;
+  height: 100vh;
+}
+
+.ball {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.2s all;
+  background-image: radial-gradient(
+    circle at 50% -3.03%,
+    #ae64db 0,
+    #8652d8 25%,
+    #4d42d4 50%,
+    #0036d0 75%,
+    #0030cd 100%
+  );
+}
+
+.ball:hover {
+  box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px,
+    rgb(255, 217, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px,
+    rgb(255, 85, 85) 0px 0px 0px 15px;
+}
+
+.time_wrapper {
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+  display: flex;
+  gap: 7px;
+  flex-direction: column;
+  align-items: end;
+  justify-content: center;
+}
+
+.time_title {
+  font-size: 20px;
+  color: #6f6f6f;
+}
+
+.time {
+  color: rgb(91, 192, 225);
+  font-size: 20px;
+}
