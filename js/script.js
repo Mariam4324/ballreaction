@@ -4,15 +4,14 @@ const ball = document.querySelector(".ball");
 main.addEventListener("click", (ev) => {
   ev.stopPropagation();
   if (ev.target.closest(".ball")) {
-    function getRandomInt(min, max) {
+    function topRandom(min, max) {
       min = Math.ceil(min);
       max = Math.floor(max);
-      const randomTopValue = Math.floor(Math.random() * (max - min + 1)) + min;
 
+      const randomTopValue = Math.floor(Math.random() * (max - min + 1)) + min;
       ball.style.top = `${randomTopValue}px`;
     }
-
-    getRandomInt(1, 600);
+    topRandom(1, 600);
 
     function leftRandom(min, max) {
       min = Math.ceil(min);
@@ -21,7 +20,6 @@ main.addEventListener("click", (ev) => {
       const randomLeftValue = Math.floor(Math.random() * (max - min + 1)) + min;
       ball.style.left = `${randomLeftValue}px`;
     }
-
     leftRandom(1, 1300);
   }
 });
