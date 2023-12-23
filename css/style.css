@@ -5,11 +5,14 @@
 }
 
 .main {
+  position: relative;
   background: #1c1c1c;
   height: 100vh;
 }
 
 .ball {
+  position: absolute;
+  /* top: 600px; */
   height: 70px;
   width: 70px;
   border-radius: 50%;
