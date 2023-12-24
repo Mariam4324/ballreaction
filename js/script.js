@@ -24,15 +24,15 @@ main.addEventListener("click", (ev) => {
     }
     leftRandom(30, 1300);
 
-    function timer() {
-      const start = new Date();
+    // function timer() {
+    //   const start = new Date();
 
-      const a = start.getTime();
+    //   const a = start.getTime();
 
-      const end = new Date();
-      console.log(`Цикл занял: ${end - start} ms`);
-    }
-    timer();
+    //   const end = new Date();
+    //   console.log(`Цикл занял: ${end - start} ms`);
+    // }
+    // timer();
 
     function renderTime(milliseconds) {
       const objTime = {
