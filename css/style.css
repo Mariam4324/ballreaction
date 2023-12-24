@@ -53,6 +53,7 @@
 }
 
 .time {
+  margin-left: 5px;
   color: rgb(91, 192, 225);
   font-size: 20px;
 }

@@ -20,6 +20,40 @@ main.addEventListener("click", (ev) => {
       const randomLeftValue = Math.floor(Math.random() * (max - min + 1)) + min;
       ball.style.left = `${randomLeftValue}px`;
     }
-    leftRandom(1, 1300);
+    leftRandom(30, 1300);
+
+    // function timer() {
+    //   const start = new Date();
+
+    //   const a = start.getTime();
+
+    //   const end = new Date();
+    //   console.log(`Цикл занял: ${end - start} ms`);
+    // }
+    // timer();
+
+    let arrTimer = [];
+
+    function renderTime(milliseconds) {
+      const objTime = [
+        
+      ];
+
+      const wrapper = document.querySelector(".time_wrapper");
+      const item = document.createElement("div");
+
+      item.innerHTML = ` 
+    <div class="time_item">
+      <span class="time_title">passed:</span>
+      <span class="time">${milliseconds} ms</span>
+    </div>`;
+
+      wrapper.append(item);
+
+      if (arrTimer.length > 5) {
+        arrTimer = [];
+      }
+    }
+    renderTime(1000);
   }
 });
