@@ -34,7 +34,7 @@ main.addEventListener("click", (ev) => {
     // }
     // timer();
 
-    function renderTime(milliseconds) {
+    function renderTime() {
       const objTime = {
         id: arrTimer.length,
         text: "passed:",
@@ -46,19 +46,18 @@ main.addEventListener("click", (ev) => {
       item.innerHTML = ` 
     <div id="${objTime.id}" class="time_item">
       <span class="time_title">${objTime.text}</span>
-      <span class="time">${milliseconds} ms</span>
+      <span class="time">${objTime.id} ms</span>
     </div>`;
 
       wrapper.append(item);
       arrTimer.push(objTime);
 
       if (arrTimer.length === 5) {
-        arrTimer = [];
-        wrapper.innerHTML = "";
+        arrTimer = arrTimer[arrTimer.length - 1];
       }
 
       console.log(arrTimer);
     }
-    renderTime(1000);
+    renderTime();
   }
 });
