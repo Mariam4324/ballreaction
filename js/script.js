@@ -24,17 +24,14 @@ main.addEventListener("click", (ev) => {
     }
     leftRandom(30, 1300);
 
-    // function timer() {
-    //   const start = new Date();
+    function timer() {
+      const date = new Date();
+      const milliseconds = date.getMilliseconds();
+      renderTime(milliseconds);
+    }
+    timer();
 
-    //   const a = start.getTime();
-
-    //   const end = new Date();
-    //   console.log(`Цикл занял: ${end - start} ms`);
-    // }
-    // timer();
-
-    function renderTime() {
+    function renderTime(milliseconds) {
       const objTime = {
         id: arrTimer.length,
         text: "passed:",
@@ -46,7 +43,7 @@ main.addEventListener("click", (ev) => {
       item.innerHTML = ` 
     <div id="${objTime.id}" class="time_item">
       <span class="time_title">${objTime.text}</span>
-      <span class="time">${objTime.id} ms</span>
+      <span class="time">${milliseconds} ms</span>
     </div>`;
 
       wrapper.append(item);
@@ -56,7 +53,7 @@ main.addEventListener("click", (ev) => {
         arrTimer = arrTimer[arrTimer.length - 1];
       }
 
-      console.log(arrTimer);
+      log;
     }
     renderTime();
   }
