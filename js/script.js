@@ -27,7 +27,12 @@ main.addEventListener("click", (ev) => {
     function timer() {
       const start = Date.now();
 
-      renderTime(1000);
+      prompt("dff");
+
+      const end = Date.now();
+
+      const diff = end - start;
+      renderTime(diff);
     }
     timer();
 
