@@ -25,9 +25,9 @@ main.addEventListener("click", (ev) => {
     leftRandom(30, 1300);
 
     function timer() {
-      const date = new Date();
-      const milliseconds = date.getMilliseconds();
-      renderTime(milliseconds);
+      const start = Date.now();
+
+      renderTime(1000);
     }
     timer();
 
@@ -43,6 +43,7 @@ main.addEventListener("click", (ev) => {
       item.innerHTML = ` 
     <div id="${objTime.id}" class="time_item">
       <span class="time_title">${objTime.text}</span>
+
       <span class="time">${milliseconds} ms</span>
     </div>`;
 
@@ -50,11 +51,10 @@ main.addEventListener("click", (ev) => {
       arrTimer.push(objTime);
 
       if (arrTimer.length === 5) {
-        arrTimer = arrTimer[arrTimer.length - 1];
+        // arrTimer = arrTimer[arrTimer.length - 1]//
+        arrTimer = [];
+        wrapper.innerHTML = "";
       }
-
-      log;
     }
-    renderTime();
   }
 });
